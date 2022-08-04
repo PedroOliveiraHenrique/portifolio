@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
+
+/* Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth; /* decida da página ser suave */
+}
+
+body {
+    background-color: #fcfbff;
+    display: flex; /* Separar os conteúdos */ 
+    justify-content: center; /* Centralizar os conteúdos */
+    background-color: rgb(14, 13, 13);
+}
+
+
+
+body::-webkit-scrollbar-thumb { 
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+
+/* ------------ INÍCIO CABEÇALHO ----------*/
+
+header {
+    width: 100%; /* largura total */
+    display: flex;/* Separar os conteúdos */ 
+    align-items: center;/* Alinhar itens ao centro */
+    justify-content: space-around;/* Dar em espaçamento entre os links */
+    padding: 5px 20px; /* Espaçamento entre o conteúdo e a borda */
+    height: 80px;/* tamanho em altura da barra */
+    position: fixed; /* quando descer a página o header desce junto */
+    top: 0; /* começar em cima */
+    z-index: 999;
+    background-color: rgb(2, 2, 50);
+    box-shadow: 0 1px 0 rgb(75, 75, 75);/* faz um efeito de sombra*/
+    text-transform: uppercase; /* deixa as letras maiúsculas */
+    opacity: 95%;
+    letter-spacing: 3px; /* Espaçamento entre as letras */
+    font-size: 15px;
+}
+
+.logo {
+    color: rgb(75, 75, 75);
+    font-size: 25px;
+}
+
+.logo a {
+    transition: 0.3s all ease;
+}
+
+.logo a:hover {
+    color: rgb(149, 120, 255);
+}
+
+
+.nav-list {
+    display: flex;
+    gap: 40px; /* espaça os elementos uns dos outros */
+}
+
+.nav-list a {
+    position: relative;
+}
+
+
+.nav-list a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(149, 120, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+
+a {
+    cursor: pointer; /* transformar o cursor do mouse */
+    text-decoration: none; /* tirar o sublinhado dos links */
+    color: white;
+    padding: 0.3rem;
+}
+
+/* -------- FIM CABEÇALHO ----------*/
+
+
+
+/* --------- INÍCIO DA SEÇÃO INÍCIO ----------- */
+
+section.inicio {
+    height: 900px;/* tamanho em altura da barra */
+    display: flex;/* Separar os conteúdos */
+    align-items: center;/* Alinhar itens ao centro */
+    justify-content: space-around;/* Dar em espaçamento entre os links */
+    padding: 5px 130px;/* Espaçamento entre o conteúdo e a borda */
+    width: 100%;/* largura total */;
+    background-color: rgb(14, 13, 13);
+    position: relative;
+}
+
+
+.inicio-info {
+    text-transform: uppercase;/* deixa as letras maiúsculas */
+    width: 50%;/* largura total */
+    display: inline;/* Separar os conteúdos */
+    gap: 15px;/* espaça os elementos uns dos outros */
+    text-align: justify; /* começar da esquerda o conteúdo */
+    color: #c4c4c4;
+    font-size: 15px;
+    align-items: center;
+}
+
+.inicio_nome {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(60, 60, 169);
+}
+
+.inicio_nome::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.inicio-img {
+    
+    display: flex;/* Separar os conteúdos */
+    align-items: center;/* Alinhar itens ao centro */
+    justify-content: center;
+    
+}
+
+.inicio-img img {
+    width: 500px;/* largura total */
+    
+}
+
+.button-in-git {
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.button-linkedin {
+    border: 1px solid rgb(75, 75, 75);
+    padding: 12px 60px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.button-linkedin:hover {
+    color: white;
+    background-color: #0e76a8;
+    opacity: 90%;
+    border-radius: 20px;
+    transform: scale(1.1); 
+}
+
+.button-github {
+    border: 1px solid rgb(75, 75, 75);
+    padding: 12px 60px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.button-github:hover {
+    color: #171515;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 20px;
+    transform: scale(1.1); 
+}
+
+
+
+/* --------- FIM DA SEÇÃO INÍCIO ----------- */
+
+
+
+/* ---------- INÍCIO DA SEÇÃO SOBRE ------------ */
+
+section .sobre-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+    height: 850px;
+    position: relative;
+    
+}
+
+.sobre-info {
+    width: 50%;
+    text-transform: uppercase;
+    gap: 50px;
+    text-align: justify;
+    font-size: 17px;
+    color: #c4c4c4;
+    line-height: 24px;
+}
+
+
+.sobre-img img {
+    width: 320px;
+    opacity: 75%;
+    transition: all 0.6s;
+}
+
+.sobre-img img:hover {
+    transform: scale(1.1); 
+    opacity: 100%;
+}
+
+/* ---------- FIM DA SEÇÃO SOBRE ------------ */
+
+
+
+
+/* ---------- INÍCIO DA SEÇÃO PROJETOS ------------ */
+
+
+section .projeto-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 850px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: rgb(14, 13, 13);
+    position: relative;
+}
+
+
+.projeto-lista {
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.projeto-lista img {
+    width: 400px;
+    transition: all 0.5s;
+}
+
+.projeto-lista img:hover {
+    transform: scale(1.1); 
+}
+
+.texto-repositorio {
+    padding-top: 18px;
+    color: #c4c4c4;
+}
+
+/* ---------- FIM DA SEÇÃO PROJETOS ------------ */
+
+
+/*----------- Footer / rodapé ------------------ */
+
+
+footer {
+    text-align: center;
+    padding: 20px 0px;
+    display: block;
+    background-color: rgb(31, 31, 31);
+    color: #c4c4c4;
+}
+
+footer .rodape {
+    color: rgb(112, 112, 221);
+}
+
+
+/*----------- Fim Footer / rodapé ------------------ */
+
+
+/* Responsividade */
+
+@media screen and (max-width: 950px) {
+    section .sobre-principal {
+        flex-direction: column;
+    }
+
+    section .projeto-principal {
+        flex-direction: column;
+    }
+
+    .inicio-img {
+        display: none;
+    }
+
+    .inicio-info {
+        text-align: center;
+    }
+
+    .inicio_nome {
+        text-align: center;
+    }
+
+    .button-in-git {
+        padding-left: 120px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .sobre-img img {
+    width: 280px;
+    }
+
+    .sobre-info {
+        text-align: center;
+    }
+
+    .projeto-lista img {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sobre-img img {
+        width: 240px;
+    }
+
+    .projeto-lista img {
+        width: 320px;
+    }
+}
